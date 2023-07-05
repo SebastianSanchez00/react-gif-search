@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { AddCategorie,GifGrid } from './components';
+import { AddCategorie, GifGrid } from './components';
 
 export const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState([ 'castle']);
+    const [categories, setCategories] = useState(['castle']);
 
     const onAddCategories = (newCategoty) => {
         if (categories.includes(newCategoty)) return
@@ -20,22 +20,14 @@ export const GifExpertApp = () => {
             <div className="input-content">
                 <AddCategorie onNewCategory={(value) => onAddCategories(value)} />
             </div>
-               
-               
-                {
-                    categories.map( (category) =>(
-                        <GifGrid key={category} category={category}/>
-                    )
-                       
-                    )
-                }
-               
-          
-              
 
-           
+            {
+                categories.map((category) => (
+                    <GifGrid key={category} category={category} />
+                )
+
+                )
+            }
         </>
-
-
     )
 }
