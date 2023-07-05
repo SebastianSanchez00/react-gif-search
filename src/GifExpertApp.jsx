@@ -10,7 +10,6 @@ export const GifExpertApp = () => {
         setCategories([newCategoty, ...categories]);
     }
 
-
     return (
         <>
             <div className='title-zone'>
